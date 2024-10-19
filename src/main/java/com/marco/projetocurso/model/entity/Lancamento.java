@@ -19,12 +19,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="lancamento", schema = "trabalho")
 
 public class Lancamento {
@@ -33,7 +37,7 @@ public class Lancamento {
 	@Column(name = "id")
 	private Long id;
 	
-	@Column(name = "descicao")
+	@Column(name = "descricao")
 	private String descricao;
 	
 	@Column(name = "mes")

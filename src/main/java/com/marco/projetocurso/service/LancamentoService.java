@@ -1,6 +1,8 @@
 package com.marco.projetocurso.service;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 import com.marco.projetocurso.model.entity.Lancamento;
 import com.marco.projetocurso.model.enums.StatusLancamento;
@@ -17,4 +19,8 @@ public interface LancamentoService {
 		void atualizarStatus(Lancamento lancamento, StatusLancamento Status);
 		
 		void validar (Lancamento lancamento);
+		
+		Optional<Lancamento> obterPorId(Long id);
+		
+		BigDecimal obterSaldoPorUsuario(Long id);
 }
