@@ -81,17 +81,17 @@ public class LancamentoServiceImpl implements LancamentoService {
 		}
 		
 		if(lancamento.getAno() < 1000 || lancamento.getAno() > 9999 ) {
-			throw new RegraNegocioException("Informe um Ano Valido");
+			throw new RegraNegocioException("Informe um Ano valido");
 		}
 		
 		if(lancamento.getUsuario()==null||lancamento.getUsuario().getId() == null) {
-			throw new RegraNegocioException("Informe um Usuario");
+			throw new RegraNegocioException("Informe um Usuario Valido");
 		}
 		if(lancamento.getValor() == null || lancamento.getValor().compareTo(BigDecimal.ZERO)<1) {
 			throw new RegraNegocioException("Informe um valor valido");
 		}
 		if(lancamento.getTipo() == null) {
-			throw new RegraNegocioException("Informe um tipo valido");
+			throw new RegraNegocioException("Informe um tipo de lancamento");
 
 		}
 		
